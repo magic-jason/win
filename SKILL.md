@@ -5,6 +5,8 @@ description: A 股每日收盘后基于本地推送的行情数据，自动生�
 
 # A 股每日行情监控（API trigger 版）
 
+> ⚠️ **本 routine 已于 2026-07-05 停用。** 本地 launchd 定时任务 `com.magic.ashare.daily` 已被卸载（`launchctl bootout`），不再定时触发本 routine。如需恢复，请在本地重新 `bootstrap` 加载对应的 `.plist`。
+
 ## 架构说明
 
 行情数据由本地 macOS 上的 `ashare-monitor-local` 项目拉取（新浪财经数据源），通过 API trigger 派发。本 routine **只负责分析和分发**，不再自己拉数据。
